@@ -24,7 +24,7 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "http://localhost:3000/notes",
+        redirectTo: "https://mini-ai-note-app.vercel.app/notes",
       },
     });
     if (error) alert(error.message);
